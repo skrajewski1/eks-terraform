@@ -22,3 +22,8 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = local.cluster_name
 }
+output "connect-to-cluser" {
+  description = "command to connect to cluster"
+  value = "aws eks update-kubeconfig --region ${var.region} --name ${local.cluster_name}"
+  
+}
